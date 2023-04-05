@@ -30,7 +30,7 @@ class Index extends Component
                                     $q2->orderBy('selling_price', 'DESC');
                                 })
                                 ->when($this->priceInput == 'low-to-high', function($q2) {
-                                        $q2->orderBy('selling_price', 'ASC');
+                                    $q2->orderBy('selling_price', 'ASC');
                                 });
                             })
                             ->where('status', '0')
