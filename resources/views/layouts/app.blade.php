@@ -38,7 +38,7 @@
         </main>
     </div>
 
-    <!-- Scripts -->
+    <!-- JavaScript -->
     <script src="{{ asset('assets/js/jquery-3.6.3.min.js') }}"> </script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"> </script>
 
@@ -49,7 +49,7 @@
         window.addEventListener('message', event => {
 
             alertify.set('notifier','position', 'top-right');
-            alertify.success(event.detail.text);
+            alertify.notify(event.detail.text, event.detail.type);
         });
     </script>
     

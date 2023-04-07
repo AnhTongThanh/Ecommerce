@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Product;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
  * Summary of Wishlist
@@ -23,4 +25,13 @@ class Wishlist extends Model
         'user_id',
         'product_id',
     ];
+
+    /**
+     * Summary of user
+     * @return BelongsTo
+     */
+    public function product() :BelongsTo
+    {
+        return $this->belongsTo(Product::class, 'product_id', 'id');
+    }
 }
