@@ -35,6 +35,7 @@ class View extends Component
                 $this->emit('wishlistAddedUpdated');
 
                 session()->flash('message', 'Wishlist Added sussessfully');
+
                 /*
                 * use AlertifyJS but not run...!
                 *
@@ -47,6 +48,7 @@ class View extends Component
             }
         } else {
             session()->flash('message', 'Please Login to continue');
+
             /*
             * use AlertifyJS but not run...!
             *
@@ -88,21 +90,36 @@ class View extends Component
     public function addToCart(int $productId)
     {
         if (Auth::check()) {
+
             if ($this->product->where('id', $productId)->where('status', '0')->exists()) {
-                # Check for Product color quantity and add to cart 
-                if ($this->product->productColors()->count() > 1) {
+
+                # Check for Product color and quantity insert to cart 
+                if ($this->product->productColors->count() > 1) {
                     if ($this->prodColorSelectedQuantity != NULL) {
                         if (
                             Cart::where('user_id', auth()->user()->id)
                                 ->where('product_id', $productId)
-                                ->where('product_color_id', $this->productColorId)
+                                ->where('product_color_id', $productId)
                                 ->exists()
                         ) {
-                            session()->flash('message', 'Product Already Added');
+                            session()->flash('message', 'Product already added');
+
+                            /*
+                            * use AlertifyJS but not run...!
+                            *
+                            $this->dispatchBrowserEvent('message', [
+                            'text' => 'Product already added',
+                            'type' => 'warning',
+                            'status' => 200
+                            ]);
+                            */
                         } else {
                             $productColor = $this->product->productColors()->where('id', $this->productColorId)->first();
+
                             if ($productColor->quantity > 0) {
+
                                 if ($productColor->quantity > $this->quantityCount) {
+
                                     # Insert Product to Cart
                                     Cart::create([
                                         'user_id' => auth()->user()->id,
@@ -110,43 +127,148 @@ class View extends Component
                                         'product_color_id' => $this->productColorId,
                                         'quantity' => $this->quantityCount
                                     ]);
-                                    session()->flash('message', 'Product Added to Cart');
+                                    session()->flash('message', 'Product added to carts');
+
+                                    /*
+                                    * use AlertifyJS but not run...!
+                                    *
+                                    $this->dispatchBrowserEvent('message', [
+                                    'text' => 'Product added to carts',
+                                    'type' => 'success',
+                                    'status' => 200
+                                    ]);
+                                    */
                                 } else {
                                     session()->flash('message', 'Only ' . $productColor->quantity . ' Quantity Available');
+
+                                    /*
+                                    * use AlertifyJS but not run...!
+                                    *
+                                    $this->dispatchBrowserEvent('message', [
+                                    'text' => 'Only '.$this->product->quantity.'Quantity Available',
+                                    'type' => 'warning',
+                                    'status' => 404
+                                    ]);
+                                    */
                                 }
                             } else {
                                 session()->flash('message', 'Out of Stock');
+
+                                /*
+                                * use AlertifyJS but not run...!
+                                *
+                                $this->dispatchBrowserEvent('message', [
+                                'text' => 'Out of Stock',
+                                'type' => 'warning',
+                                'status' => 404
+                                ]);
+                                */
                             }
                         }
                     } else {
-                        session()->flash('message', 'Select Your Product Color');
+                        session()->flash('message', 'Select your Product Color');
+
+                        /*
+                        * use AlertifyJS but not run...!
+                        *
+                        $this->dispatchBrowserEvent('message', [
+                        'text' => 'Select your Product Color',
+                        'type' => 'info',
+                        'status' => 404
+                        ]);
+                        */
                     }
                 } else {
                     if (Cart::where('user_id', auth()->user()->id)->where('product_id', $productId)->exists()) {
-                        session()->flash('message', 'Product Already Added');
+                        session()->flash('message', 'Product already added');
+
+                        /*
+                        * use AlertifyJS but not run...!
+                        *
+                        $this->dispatchBrowserEvent('message', [
+                        'text' => 'Product already added',
+                        'type' => 'warning',
+                        'status' => 200
+                        ]);
+                        */
                     } else {
                         if ($this->product->quantity > 0) {
+
                             if ($this->product->quantity > $this->quantityCount) {
+
                                 # Insert Product to Cart
                                 Cart::create([
                                     'user_id' => auth()->user()->id,
                                     'product_id' => $productId,
                                     'quantity' => $this->quantityCount
                                 ]);
-                                session()->flash('message', 'Product Added to Cart');
+                                session()->flash('message', 'Product added to carts');
+
+                                /*
+                                * use AlertifyJS but not run...!
+                                *
+                                $this->dispatchBrowserEvent('message', [
+                                'text' => 'Product added to carts',
+                                'type' => 'success',
+                                'status' => 200
+                                ]);
+                                */
+
                             } else {
                                 session()->flash('message', 'Only ' . $this->product->quantity . ' Quantity Available');
+
+                                /*
+                                * use AlertifyJS but not run...!
+                                *
+                                $this->dispatchBrowserEvent('message', [
+                                'text' => 'Only '.$this->product->quantity.'Quantity Available',
+                                'type' => 'warning',
+                                'status' => 404
+                                ]);
+                                */
                             }
+
                         } else {
                             session()->flash('message', 'Out of Stock');
+
+                            /*
+                            * use AlertifyJS but not run...!
+                            *
+                            $this->dispatchBrowserEvent('message', [
+                            'text' => 'Out of Stock',
+                            'type' => 'warning',
+                            'status' => 404
+                            ]);
+                            */
                         }
                     }
                 }
+
             } else {
-                session()->flash('message', 'Product Does not exists');
+                session()->flash('message', 'Product Does not Exists');
+
+                /*
+                * use AlertifyJS but not run...!
+                *
+                $this->dispatchBrowserEvent('message', [
+                'text' => 'Product Does not Exists',
+                'type' => 'warning',
+                'status' => 404
+                ]);
+                */
             }
         } else {
             session()->flash('message', 'Please Login to Add Cart');
+
+            /*
+            * use AlertifyJS but not run...!
+            *
+            $this->dispatchBrowserEvent('message', [
+            'text' => 'Please Login to Add Cart',
+            'type' => 'info',
+            'status' => 401
+            ]);
+            */
         }
     }
 
