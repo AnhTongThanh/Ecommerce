@@ -110,6 +110,8 @@ class View extends Component
                                         'product_color_id' => $this->productColorId,
                                         'quantity' => $this->quantityCount
                                     ]);
+
+                                    $this->emit('CartAddedUpdated');
                                     session()->flash('message', 'Product Added to Cart');
                                 } else {
                                     session()->flash('message', 'Only ' . $productColor->quantity . ' Quantity Available');
@@ -133,6 +135,8 @@ class View extends Component
                                     'product_id' => $productId,
                                     'quantity' => $this->quantityCount
                                 ]);
+
+                                $this->emit('CartAddedUpdated');
                                 session()->flash('message', 'Product Added to Cart');
                             } else {
                                 session()->flash('message', 'Only ' . $this->product->quantity . ' Quantity Available');
