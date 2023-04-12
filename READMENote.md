@@ -3,4 +3,4 @@
 * PHP version 8.0
 */
 
-Tiến trình: Laravel 9 Ecom - Part 26: How to check Product Stock Availability using Livewire Laravel
+Tiến trình: Laravel 9 Ecom - Part 33(19p22s): How to check Product Stock Availability using Livewire Laravel
