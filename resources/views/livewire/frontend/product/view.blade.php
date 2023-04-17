@@ -26,8 +26,8 @@
                             Home / {{ $product->category->name }} / {{ $product->name }}
                         </p>
                         <div>
-                            <span class="selling-price">${{ $product->selling_price }}</span>
-                            <span class="original-price">${{ $product->original_price }}</span>
+                            <span class="selling-price">{{ $product->selling_price }} VNĐ</span>
+                            <span class="original-price">{{ $product->original_price }} VNĐ</span>
                         </div>
                         <div>
                             @if ($product->productColors->count() > 0)

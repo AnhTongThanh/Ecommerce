@@ -41,7 +41,7 @@
                                         </a>
                                     </div>
                                     <div class="col-md-2 my-auto">
-                                        <label class="price">${{ $wishlistItem->product->selling_price }} </label>
+                                        <label class="price">{{ $wishlistItem->product->selling_price }} VNĐ</label>
                                     </div>
                                     <div class="col-md-4 col-12 my-auto">
                                         <div class="remove">
