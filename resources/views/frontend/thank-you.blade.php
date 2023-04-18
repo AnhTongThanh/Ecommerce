@@ -8,6 +8,11 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
+                    @if (session()->has('message'))
+                        <div class="alert alert-success">
+                            {{ session('message') }}
+                        </div>
+                    @endif
                     <div class="p-4 shadow bg-white">
                         <h2>You logo</h2>
                         <h4>Thank you for Shopping with Ah-Ecom</h4>
