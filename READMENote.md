@@ -3,4 +3,8 @@
 * PHP version 8.0
 */
 
-Tiến trình: Laravel 9 Ecom - Part 33(19p22s): How to check Product Stock Availability using Livewire Laravel
+- Process: Laravel 9 Ecom:
++ Part 41: How to integrate PayPal payment gateway | PayPal Smart Buttons checkout (unfulfilled).
++ Past 42: How to display my orders list in Laravel 9 eCommerce | User Orders.
++ Part 43: How to display orders items and order details in Laravel 9 | User Orders.
+
