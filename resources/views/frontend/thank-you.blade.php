@@ -15,7 +15,7 @@
                     @endif
                     <div class="p-4 shadow bg-white">
                         <h2>You logo</h2>
-                        <h4>Thank you for Shopping with Ah-Ecom</h4>
+                        <h4>Thank you for Shopping with AnhTong</h4>
                         <a href="{{ url('collections') }}" class="btn btn-primary">Shop now</a>
                     </div>
                 </div>

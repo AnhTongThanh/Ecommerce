@@ -7,4 +7,6 @@
 + Part 41: How to integrate PayPal payment gateway | PayPal Smart Buttons checkout (unfulfilled).
 + Past 42: How to display my orders list in Laravel 9 eCommerce | User Orders.
 + Part 43: How to display orders items and order details in Laravel 9 | User Orders.
-
++ Part 44: Show order list & order items in Admin Panel | Admin Order.
++ Part 45: Filter order in Admin Panel | Filter order by date & status | Admin Order.
++ Part 46: How to Update order status in Admin Panel | Admin Order.

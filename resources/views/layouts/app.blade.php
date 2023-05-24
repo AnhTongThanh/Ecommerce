@@ -11,7 +11,7 @@
 
     <meta name="description" content="@yield('meta_description')">
     <meta name="keywords" content="@yield('meta_keyword')">
-    <meta name="author" content="AhTog-Ecom">
+    <meta name="author" content="TongThanhAnh">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
