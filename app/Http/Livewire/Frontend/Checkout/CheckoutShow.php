@@ -39,7 +39,7 @@ class CheckoutShow extends Component
 
         $order = Order::create([
             'user_id' => auth()->user()->id,
-            'tracking_no' => 'AnhTong-' . Str::random(10),
+            'tracking_no' => 'Bookstore-' . Str::random(10),
             'fullname' => $this->fullname,
             'email' => $this->email,
             'phone' => $this->phone,
