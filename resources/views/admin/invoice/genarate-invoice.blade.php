@@ -6,13 +6,19 @@
 
     <style>
         html,
+        @font-face {
+            font-family: 'DejaVu Sans';
+            font-style: normal;
+            font-weight: normal;
+            src: url({{ storage_path('fonts/DejaVuSans.ttf') }}) format('truetype');
+        }
         body {
             margin: 10px;
             padding: 10px;
-            font-family: sans-serif;
+            font-family: 'DejaVu Sans', sans-serif;
         }
         h1,h2,h3,h4,h5,h6,p,span,label {
-            font-family: sans-serif;
+            font-family: 'DejaVu Sans', sans-serif;
         }
         table {
             width: 100%;
@@ -23,7 +29,7 @@
             height: 28px;
             text-align: left;
             font-size: 16px;
-            font-family: sans-serif;
+            font-family: 'DejaVu Sans', sans-serif;
         }
         table, th, td {
             border: 1px solid #ddd;
@@ -35,16 +41,16 @@
             font-size: 24px;
             margin-top: 12px;
             margin-bottom: 12px;
-            font-family: sans-serif;
+            font-family: 'DejaVu Sans', sans-serif;
         }
         .small-heading {
             font-size: 18px;
-            font-family: sans-serif;
+            font-family: 'DejaVu Sans', sans-serif;
         }
         .total-heading {
             font-size: 18px;
             font-weight: 700;
-            font-family: sans-serif;
+            font-family: 'DejaVu Sans', sans-serif;
         }
         .order-details tbody tr td:nth-child(1) {
             width: 20%;
@@ -65,7 +71,7 @@
         .company-data span {
             margin-bottom: 4px;
             display: inline-block;
-            font-family: sans-serif;
+            font-family: 'DejaVu Sans', sans-serif;
             font-size: 14px;
             font-weight: 400;
         }

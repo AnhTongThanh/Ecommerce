@@ -17,10 +17,23 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 // Frontend Route
-Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
-Route::get('/collections', [App\Http\Controllers\Frontend\FrontendController::class, 'categories']);
-Route::get('/collections/{category_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'products']);
-Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'productView']);
+// Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
+// Route::get('/collections', [App\Http\Controllers\Frontend\FrontendController::class, 'categories']);
+// Route::get('/collections/{category_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'products']);
+// Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'productView']);
+
+// New-Arrivals Route
+Route::controller(App\Http\Controllers\Frontend\FrontendController::class)->group(function () {
+
+    Route::get('/','index');
+    Route::get('/collections','categories');
+    Route::get('/collections/{category_slug}','products');
+    Route::get('/collections/{category_slug}/{product_slug}','productView');
+
+    Route::get('/new-arrivals','newArrival');
+
+});
+
 
 // Wishlist Route
 Route::middleware(['auth'])->group(function () {

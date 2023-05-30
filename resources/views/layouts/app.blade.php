@@ -22,13 +22,13 @@
     <!--Style-->
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet">
     <!--Owl Carousel2-->
-    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl.carousel.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/owl.theme.default.min.css') }}" rel="stylesheet">
 
-    <!-- CSS AlertifyJS -->
-    {{-- <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/> --}}
+    <!--Exzoom-->
+    <link href="{{ asset('assets/exzoom/jquery.exzoom.css') }}" rel="stylesheet">
+
+    <link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet">
 
     @livewireStyles
 </head>
@@ -44,20 +44,13 @@
     <script src="{{ asset('assets/js/jquery-3.6.3.min.js') }}"> </script>
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"> </script>
 
-    <!-- JavaScript AlertifyJS -->
-    {{-- <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    <script>
-        window.addEventListener('message', event => {
-
-            alertify.set('notifier','position', 'top-right');
-            alertify.notify(event.detail.text, event.detail.type);
-        });
-    </script> --}}
-
     <!--Owl Carousel2-->
     <script src="{{ asset('assets/js/owl.carousel.min.js') }}"> </script>
+    <script src="{{ asset('assets/exzoom/jquery.exzoom.js') }}"> </script>
+    
     @yield('script')
     
     @livewireScripts
+    @stack('scripts')
 </body>
 </html>

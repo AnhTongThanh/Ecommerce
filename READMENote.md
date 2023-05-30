@@ -12,3 +12,5 @@
 + Part 46: How to Update order status in Admin Panel | Admin Order.
 + Part 47: Generate order invoice as PDF in laravel 9 | View Invoice & Print Invoice (import library pdf https://github.com/barryvdh/laravel-dompdf).
 + Part 48: How to display trending products in laravel 9 | Integrate Owl Carousel.
++ Part 49: Product Image slider with Magnifying effect | Image magnifier on hover
++ Part 50: How to display New Arrival Products in laravel 9 eCommerce
