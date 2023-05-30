@@ -3,7 +3,7 @@
       <div class="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">  
         <a class="navbar-brand brand-logo" href="index.html">
           {{-- <img src="images/logo.svg" alt="logo"/> --}}
-          Ecommerce
+          TongThanhAnh
         </a>
         <a class="navbar-brand brand-logo-mini" href="index.html"><img src="images/logo-mini.svg" alt="logo"/></a>
         <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
@@ -30,7 +30,7 @@
             <i class="mdi mdi-message-text mx-0"></i>
             <span class="count"></span>
           </a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
+          {{-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="messageDropdown">
             <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
             <a class="dropdown-item">
               <div class="item-thumbnail">
@@ -68,14 +68,14 @@
                 </p>
               </div>
             </a>
-          </div>
+          </div> --}}
         </li>
         <li class="nav-item dropdown me-4">
           <a class="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center notification-dropdown" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
             <i class="mdi mdi-bell mx-0"></i>
             <span class="count"></span>
           </a>
-          <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
+          {{-- <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="notificationDropdown">
             <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
             <a class="dropdown-item">
               <div class="item-thumbnail">
@@ -116,7 +116,7 @@
                 </p>
               </div>
             </a>
-          </div>
+          </div> --}}
         </li>
         <li class="nav-item nav-profile dropdown">
           <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" id="profileDropdown">

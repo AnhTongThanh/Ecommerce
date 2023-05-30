@@ -39,7 +39,7 @@ class CheckoutShow extends Component
 
         $order = Order::create([
             'user_id' => auth()->user()->id,
-            'tracking_no' => 'Ah-Ecom-' . Str::random(10),
+            'tracking_no' => 'Bookstore-' . Str::random(10),
             'fullname' => $this->fullname,
             'email' => $this->email,
             'phone' => $this->phone,
@@ -58,6 +58,17 @@ class CheckoutShow extends Component
                 'quantity' => $cartItem->quantity,
                 'price' => $cartItem->product->selling_price
             ]);
+
+            if ($cartItem->product_color_id != NULL) {
+
+                $cartItem->productColor()->where('id', $cartItem->product_color_id)->decrement('quantity', $cartItem->quantity);
+
+            } else {
+
+                $cartItem->product()->where('id', $cartItem->product_id)->decrement('quantity', $cartItem->quantity);
+
+            }
+            
         }
 
         return $order;
@@ -85,6 +96,7 @@ class CheckoutShow extends Component
 
     public function totalProductAmount()
     {
+        $this->totalProductAmount = 0;
         $this->carts = Cart::where('user_id', auth()->user()->id)->get();
         foreach ($this->carts as $cartItem) {
             $this->totalProductAmount += $cartItem->product->selling_price * $cartItem->quantity;
