@@ -14,3 +14,4 @@
 + Part 48: How to display trending products in laravel 9 | Integrate Owl Carousel.
 + Part 49: Product Image slider with Magnifying effect | Image magnifier on hover
 + Part 50: How to display New Arrival Products in laravel 9 eCommerce
++ Part 51: How to make Featured Products in Laravel 9 eCommerce

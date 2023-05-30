@@ -123,14 +123,20 @@
                                 </div>                           
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label >Trending</label>
-                                        <input type="checkbox" name="trending" style="width: 50px; height: 50px;"/>
+                                        <label >Trending</label><br/>
+                                        <input type="checkbox" name="trending" style="width: 30px; height: 30px;" />
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="mb-3">
-                                        <label >Status</label>
-                                        <input type="checkbox" name="status" style="width: 50px; height: 50px;"/>
+                                        <label >Featured</label><br/>
+                                        <input type="checkbox" name="featured" style="width: 30px; height: 30px;" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="mb-3">
+                                        <label >Status</label><br/>
+                                        <input type="checkbox" name="status" style="width: 30px; height: 30px;" />
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +157,7 @@
                                             <div class="p-2 border mb-3">
                                                 Color: <input type="checkbox" name="colors[{{ $coloritem->id }}]" value="{{ $coloritem->id }}"/> 
                                                 {{ $coloritem->name }}
-                                                </br>
+                                                <br/>
                                                 Quantity: <input type="number" name="colorquantity[{{ $coloritem->id }}]" style="width: 70px; border: 1px solid" />
                                             </div>
                                         </div>
@@ -163,7 +169,8 @@
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <br/>
+                        <div class="text-center">
                             <button type="submit" class="btn btn-primary">Submit</button>
                         </div>
                     </div>
