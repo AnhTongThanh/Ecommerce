@@ -6,10 +6,10 @@
                     <h4 class="footer-heading">BookStore</h4>
                     <div class="footer-underline"></div>
                     <p>
-                        Welcome to our bookstore! We are a haven for book lovers, offering a wide selection of books across various genres. 
-                        From classic literature to the latest bestsellers, we have something for everyone. 
-                        Our knowledgeable staff is always on hand to provide recommendations and assist you in finding your next great read. 
-                        Whether you're looking for a quick beach read or a dense philosophical tome, we invite you to explore our shelves and discover your next literary adventure.
+                        Thank you for visiting our site! 
+                        We appreciate your time and hope that you found what you were looking for. 
+                        If you have any feedback or suggestions on how we can improve our website, 
+                        please don't hesitate to let us know. Thanks again for stopping by!
                     </p>
                 </div>
                 <div class="col-md-3">
@@ -56,7 +56,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8">
-                    <p class=""> &copy; 2023 - BookStore. All rights reserved.</p>
+                    <p class=""> &copy; 2023 - My BookStore.</p>
                 </div>
                 <div class="col-md-4">
                     <div class="social-media">
