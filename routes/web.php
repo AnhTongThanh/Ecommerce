@@ -54,6 +54,7 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
     // Settings Route
     ROute::get('settings', [App\Http\Controllers\Admin\SettingController::class, 'index']);
+    ROute::post('settings', [App\Http\Controllers\Admin\SettingController::class, 'store']);
 
     // Slider Routes
     Route::controller(App\Http\Controllers\Admin\SliderController::class)->group(function () {

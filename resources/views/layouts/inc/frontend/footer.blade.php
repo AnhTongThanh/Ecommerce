@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3">
-                    <h4 class="footer-heading">BookStore</h4>
+                    <h4 class="footer-heading">{{ $appSetting->website_name ?? 'website name' }}</h4>
                     <div class="footer-underline"></div>
                     <p>
                         Thank you for visiting our site! 
@@ -35,17 +35,20 @@
                     <div class="footer-underline"></div>
                     <div class="mb-2">
                         <p>
-                            <i class="fa fa-map-marker"></i> 61/48, Street No. 19, Ward 8, Go Vap District
+                            <i class="fa fa-map-marker"></i> 
+                            {{ $appSetting->address ?? 'address' }}
                         </p>
                     </div>
                     <div class="mb-2">
                         <a href="" class="text-white">
-                            <i class="fa fa-phone"></i> +84: 0987-457-830
+                            <i class="fa fa-phone"></i>
+                            {{ $appSetting->phone1 ?? 'phone 1' }}
                         </a>
                     </div>
                     <div class="mb-2">
                         <a href="" class="text-white">
                             <i class="fa fa-envelope"></i> bookstore@gmail.com.vn
+                            {{ $appSetting->email1 ?? 'email 1' }}
                         </a>
                     </div>
                 </div>
@@ -61,10 +64,18 @@
                 <div class="col-md-4">
                     <div class="social-media">
                         Get Connected:
-                        <a href=""><i class="fa fa-facebook"></i></a>
-                        <a href=""><i class="fa fa-twitter"></i></a>
-                        <a href=""><i class="fa fa-instagram"></i></a>
-                        <a href=""><i class="fa fa-youtube"></i></a>
+                        @if ($appSetting->facebook)
+                            <a href="{{ $appSetting->facebook }}" target="_blank"><i class="fa fa-facebook"></i></a>
+                        @endif
+                        @if ($appSetting->twitter)
+                            <a href="{{ $appSetting->twitter }}" target="_blank"><i class="fa fa-twitter"></i></a>
+                        @endif
+                        @if ($appSetting->instagram)
+                            <a href="{{ $appSetting->instagram }}" target="_blank"><i class="fa fa-instagram"></i></a>
+                        @endif
+                        @if ($appSetting->youtube)
+                            <a href="{{ $appSetting->youtube }}" target="_blank"><i class="fa fa-youtube"></i></a>
+                        @endif
                     </div>
                 </div>
             </div>
