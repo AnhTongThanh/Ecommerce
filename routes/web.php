@@ -16,13 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-// Frontend Route
-// Route::get('/', [App\Http\Controllers\Frontend\FrontendController::class, 'index']);
-// Route::get('/collections', [App\Http\Controllers\Frontend\FrontendController::class, 'categories']);
-// Route::get('/collections/{category_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'products']);
-// Route::get('/collections/{category_slug}/{product_slug}', [App\Http\Controllers\Frontend\FrontendController::class, 'productView']);
-
-// New-Arrivals Route
+// Frontend + New-Arrivals Route
 Route::controller(App\Http\Controllers\Frontend\FrontendController::class)->group(function () {
 
     Route::get('/','index');
@@ -57,6 +51,9 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
     //Dashboard Routes
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
+
+    // Settings Route
+    ROute::get('settings', [App\Http\Controllers\Admin\SettingController::class, 'index']);
 
     // Slider Routes
     Route::controller(App\Http\Controllers\Admin\SliderController::class)->group(function () {

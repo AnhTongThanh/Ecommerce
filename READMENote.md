@@ -16,3 +16,4 @@
 + Part 50: How to display New Arrival Products in laravel 9 eCommerce
 + Part 51: How to make Featured Products in Laravel 9 eCommerce
 + Part 52: How to create footer page using HTML CSS & Bootstrap 5 in Laravel 9
++ Part 53: How to create website setting in laravel & set global variable in Laravel (process 8:00)

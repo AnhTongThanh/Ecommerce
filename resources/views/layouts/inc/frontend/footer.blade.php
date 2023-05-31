@@ -45,7 +45,7 @@
                     </div>
                     <div class="mb-2">
                         <a href="" class="text-white">
-                            <i class="fa fa-envelope"></i> tongthanhanh@gmail.com
+                            <i class="fa fa-envelope"></i> bookstore@gmail.com.vn
                         </a>
                     </div>
                 </div>
