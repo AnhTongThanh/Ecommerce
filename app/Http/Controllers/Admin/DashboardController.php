@@ -32,7 +32,7 @@ class DashboardController extends Controller
         $thisMouthOrder = Order::whereMonth('created_at', $thisMouth)->count();
         $thisYearOrder = Order::whereYear('created_at', $thisYear)->count();
 
-        return view('admin.dashboard', compact('totalProducts', 'totalCategories', 'totalBrands', 'totalAllUsers', 'totalUser', 'totalAdmin',
-                                                'totalOrder', 'todayOrder', 'thisMouthOrder', 'thisYearOrder'));
+        return view('admin.dashboard', compact('totalProducts', 'totalCategories', 'totalBrands', 'totalAllUsers', 'totalUser', 
+                                                'totalAdmin','totalOrder', 'todayOrder', 'thisMouthOrder', 'thisYearOrder'));
     }
 }

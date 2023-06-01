@@ -19,3 +19,4 @@
 + Part 53: How to create website setting in laravel & set global variable in Laravel.
 + Part 54: Display New arrivals & Featured products with carousel in home page.
 + Part 55: User CRUD with Roles in Admin Dashboard in Laravel 9 CRUD.
++ Part 56: Display analytics in admin dashboard | Display Total Users, Total Orders
