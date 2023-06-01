@@ -14,12 +14,17 @@ class FrontendController extends Controller
     {
         $sliders = Slider::where('status', '0')->get();
         $trendingProducts = Product::where('trending', '1')->latest()->take(15)->get();
-        return view('frontend.index', compact('sliders', 'trendingProducts'));
+        $newArrivalsProducts = Product::latest()->take(14)->get();
+        $featuredProducts = Product::where('featured','1')->latest()->get();
+
+
+        return view('frontend.index', compact('sliders', 'trendingProducts', 'newArrivalsProducts', 'featuredProducts'));
     }
 
     public function newArrival()
     {
-        $newArrivalsProducts = Product::latest()->take(15)->get();
+        $newArrivalsProducts = Product::latest()->take(16)->get();
+
         return view('frontend.pages.new-arrival', compact('newArrivalsProducts'));
 
     }
@@ -27,12 +32,14 @@ class FrontendController extends Controller
     public function featuredProducts()
     {
         $featuredProducts = Product::where('featured','1')->latest()->get();
+
         return view('frontend.pages.featured-products', compact('featuredProducts'));
     }
 
     public function categories()
     {
         $categories = Category::where('status', '0')->get();
+
         return view('frontend.collections.category.index', compact('categories'));
     }
 
@@ -45,6 +52,7 @@ class FrontendController extends Controller
             return view('frontend.collections.products.index', compact('category'));
 
         } else {
+
             return redirect()->back();
         }
     }
@@ -61,9 +69,11 @@ class FrontendController extends Controller
 
                 return view('frontend.collections.products.view', compact('product', 'category'));
             } else {
+
                 return redirect()->back();
             }
         } else {
+
             return redirect()->back();
         }
     }
