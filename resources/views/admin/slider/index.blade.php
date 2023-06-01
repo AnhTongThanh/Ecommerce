@@ -1,5 +1,8 @@
 @extends('layouts.admin')
 
+@section('title', 'Sliders List')
+
+
 @section('content')
 
 <div class="row">

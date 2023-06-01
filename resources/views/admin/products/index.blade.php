@@ -1,5 +1,7 @@
 @extends('layouts.admin')
 
+@section('title', 'Products List')
+
 @section('content')
 
 <div class="row">
@@ -58,6 +60,9 @@
                         @endforelse
                     </tbody>
                 </table>
+                <div>
+                    {{ $products->links() }}
+                </div>
             </div>
         </div>
     </div>

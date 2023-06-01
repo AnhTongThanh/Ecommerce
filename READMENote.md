@@ -17,4 +17,5 @@
 + Part 51: How to make Featured Products in Laravel 9 eCommerce
 + Part 52: How to create footer page using HTML CSS & Bootstrap 5 in Laravel 9
 + Part 53: How to create website setting in laravel & set global variable in Laravel.
-+ Part 54: Display New arrivals & Featured products with carousel in home page
++ Part 54: Display New arrivals & Featured products with carousel in home page.
++ Part 55: User CRUD with Roles in Admin Dashboard in Laravel 9 CRUD.

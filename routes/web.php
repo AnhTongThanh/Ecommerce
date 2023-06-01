@@ -49,7 +49,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // Admin Route
 Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
 
-    //Dashboard Routes
+    // Dashboard Routes
     Route::get('dashboard', [App\Http\Controllers\Admin\DashboardController::class, 'index']);
 
     // Settings Route
@@ -110,6 +110,16 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
         Route::put('/orders/{orderId}', 'updateOrderStatus');
         Route::get('/invoice/{orderId}', 'viewInvoice');
         Route::get('/invoice/{orderId}/generate', 'generateInvoice');
+    });
+
+    // Users Roles Router
+    Route::controller(App\Http\Controllers\Admin\UserController::class)->group(function () {
+        Route::get('/users', 'index');
+        Route::get('/users/create', 'create');
+        Route::post('/users', 'store');
+        Route::get('/users/{user_id}/edit', 'edit');
+        Route::put('/users/{user_id}', 'update');
+        Route::get('/users/{user_id}/delete', 'destroy');
     });
 
 });
