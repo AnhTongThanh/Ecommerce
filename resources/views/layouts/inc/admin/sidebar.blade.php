@@ -8,13 +8,13 @@
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('admin/orders') }}">
-          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          <i class="mdi mdi-sale menu-icon"></i>
           <span class="menu-title">Orders</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('admin/category') }}">
-          <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+          <i class="mdi mdi-view-list menu-icon"></i>
           <span class="menu-title">Category</span>
         </a>
       </li>
@@ -49,11 +49,26 @@
           <span class="menu-title">Home Slider</span>
         </a>
       </li>
-      {{-- <li class="nav-item">
-        <a class="nav-link" href="#">
+
+      <li class="nav-item">
+        <a class="nav-link" data-bs-toggle="collapse" href="#users" aria-expanded="false">
+          <i class="mdi mdi-account-multiple-plus menu-icon"></i>
+          <span class="menu-title">Users</span>
+          <i class="menu-arrow"></i>
+        </a>
+        <div class="collapse" id="users">
+          <ul class="nav flex-column sub-menu">
+            <li class="nav-item"><a href="{{ url('admin/users/create') }}" class="nav-link">Add User</a></li>
+            <li class="nav-item"><a href="{{ url('admin/users') }}" class="nav-link">View User</a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('admin/settings') }}">
           <i class="mdi mdi-settings menu-icon"></i>
           <span class="menu-title">Site Setting</span>
         </a>
-      </li> --}}
+      </li>
     </ul>
   </nav>
