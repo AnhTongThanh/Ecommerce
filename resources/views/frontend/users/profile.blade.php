@@ -27,7 +27,9 @@
 
                 <div class="card shadow">
                     <div class="cart-header bg-primary">
-                        <h4 class="mb-1 text-white">User Details</h4>
+                        <h4 class="mb-1 text-white">User Details
+                            <a href="{{ url('change-password') }}" class="btn btn-warning float-end">Change Password?</a>
+                        </h4>
                     </div>
                 </div>
                 <div class="card-body">
