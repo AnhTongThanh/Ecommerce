@@ -19,9 +19,9 @@
 + Part 53: How to create website setting in laravel & set global variable in Laravel.
 + Part 54: Display New arrivals & Featured products with carousel in home page.
 + Part 55: User CRUD with Roles in Admin Dashboard in Laravel 9 CRUD.
-+ Part 56: Display analytics in admin dashboard | Display Total Users, Total Orders
-+ Part 57: How to make Search bar for products in laravel 9 | Product Search Page
-+ Part 58: Create User profile with hasOne relationship in laravel| User Profile Page
++ Part 56: Display analytics in admin dashboard | Display Total Users, Total Orders.
++ Part 57: How to make Search bar for products in laravel 9 | Product Search Page.
++ Part 58: Create User profile with hasOne relationship in laravel| User Profile Page.
 + 
 + 
 + 

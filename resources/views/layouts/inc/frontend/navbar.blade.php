@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-2 my-auto d-none d-sm-none d-md-block d-lg-block">
-                    <h5 class="brand-name">{{ $appSetting->website_name ?? 'website name' }}</h5>
+                    <a class="nav-link" href="{{ url('/') }}"><h5 class="brand-name">{{ $appSetting->website_name ?? 'website name' }}</h5></a>
                 </div>
                 <div class="col-md-5 my-auto">
                     <form action="{{ url('search') }}" method="GET" role="search">
@@ -46,10 +46,10 @@
                                 <i class="fa fa-user"></i> {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profile</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa fa-list"></i> My Orders</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa fa-heart"></i> My Wishlist</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
+                            <li><a class="dropdown-item" href="{{ url('profile') }}"><i class="fa fa-user"></i> Profile</a></li>
+                            <li><a class="dropdown-item" href="{{ url('orders') }}"><i class="fa fa-list"></i> My Orders</a></li>
+                            <li><a class="dropdown-item" href="{{ url('wishlist') }}"><i class="fa fa-heart"></i> My Wishlist</a></li>
+                            <li><a class="dropdown-item" href="{{ url('cart') }}"><i class="fa fa-shopping-cart"></i> My Cart</a></li>
                             <li>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
@@ -68,16 +68,21 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand d-block d-sm-block d-md-none d-lg-none" href="#">
-                Funda Ecom
+            {{-- <a class="navbar-brand d-block d-sm-block d-md-none d-lg-none" href="{{ url('/') }}">
+                {{ $appSetting->website_name ?? 'website name' }}
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> --}}
+            {{-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> --}}
+            <div class="collapse navbar-collapse" id="navbarNav">
+                    {{-- <ul class="navbar-nav me-auto mb-2 mb-lg-0"> --}}
+                <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/') }}">Home</a>
                     </li>
@@ -90,7 +95,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/featured-products') }}">Featured Products</a>
                     </li>
-                    <li class="nav-item">
+                    {{-- <li class="nav-item">
                         <a class="nav-link" href="{{ url('/') }}">Electronics</a>
                     </li>
                     <li class="nav-item">
@@ -104,7 +109,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/') }}">Appliances</a>
-                    </li>
+                    </li> --}}
                 </ul>
             </div>
         </div>
