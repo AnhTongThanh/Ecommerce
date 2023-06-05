@@ -23,6 +23,6 @@
 + Part 57: How to make Search bar for products in laravel 9 | Product Search Page.
 + Part 58: Create User profile with hasOne relationship in laravel| User Profile Page.
 + Part 59: How to make Change Password with Current Password Validation in Laravel 9
-+ 
++ Part 60: Send invoice mail using Gmail SMTP in Laravel 9 | Laravel 9 Mailer Tuts (unfinished)
 + 
 + 
